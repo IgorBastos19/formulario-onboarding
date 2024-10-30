@@ -1,0 +1,120 @@
+:root {
+  --background-light: #ffffff;
+  --background-dark: #0a0a0a;
+  --foreground-light: #171717;
+  --foreground-dark: #ededed;
+  --primary-color: #0070f3;
+  --secondary-color: #555555;
+  --accent-color: #ff4081;
+  --border-radius: 8px;
+  --padding: 16px;
+  --font-size-base: 16px;
+  --font-size-large: 1.25rem;
+  --font-size-small: 0.875rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-light: var(--background-dark);
+    --foreground-light: var(--foreground-dark);
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: var(--font-size-base);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--foreground-light);
+  background-color: var(--background-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground-light);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(50, 248, 0);
+}
+
+.container {
+  padding: var(--padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  background-color: var(--background-light);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 48px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  text-align: center;
+  width: 570px;
+  min-width: 300px;
+  height: 650px;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: var(--foreground-dark);
+    background-color: var(--background-dark);
+  }
+}
