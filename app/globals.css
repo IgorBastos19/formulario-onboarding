@@ -30,6 +30,7 @@ body {
   background-color: var(--background-light);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(18, 18, 90, 0.637);
 }
 
 *,
@@ -93,15 +94,15 @@ button:hover {
 .card {
   background-color: var(--background-light);
   border: 1px solid var(--secondary-color);
-  border-radius: var(--border-radius);
-  padding: 48px;
+  border-radius: 30px;
+  padding: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   text-align: center;
-  width: 570px;
-  min-width: 300px;
-  height: 650px;
+  width: 370px;
+  height: 80vh;
   font-size: 1.5rem;
+  min-height: 550px;
 }
 
 .card:hover {
