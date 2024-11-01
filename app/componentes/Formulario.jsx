@@ -1,15 +1,21 @@
-export default function Formulario(props) {
+export default function Formulario({ campos }) {
   return (
-    <input
-      type={props.Formulariotype}
-      placeholder={props.FormularioPlaceholder}
-      required
-      maxlength="30"
-      autoComplete="on"
-      autofocus
-    />
+    <>
+      {campos.map((campo, index) => (
+        <input
+          key={index}
+          type={campo.Formulariotype}
+          placeholder={campo.FormularioPlaceholder}
+          required
+          maxLength="30"
+          autoComplete="on"
+          autoFocus
+        />
+      ))}
+    </>
   );
 }
+
 /*
 type="email"
       name="oi"
